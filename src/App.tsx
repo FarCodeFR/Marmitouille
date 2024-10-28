@@ -3,6 +3,7 @@ import "./assets/Style/App.css";
 import "./Components/Header";
 import "./Components/Card";
 import "./Components/Footer";
+import Recette from "./Components/recette";
 
 function App() {
   const [] = useState(0);
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <img src="src/assets/img/logo.png"></img>
-
+      <Recette />
       <h1>Bienvenue sur Marmitouille</h1>
     </>
   );
