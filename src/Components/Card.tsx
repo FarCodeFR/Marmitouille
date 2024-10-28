@@ -1,7 +1,5 @@
 function Card() {
-  return(
-    
-  );
+  return;
 }
 
 export default Card;
