@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./assets/Style/App.css";
-import "./Components/Header";
 import "./Components/Card";
 import "./Components/Footer";
+import Header from "./Components/Header";
 import Card from "./Components/Card";
 
 const recipes = [
@@ -68,7 +68,9 @@ function App() {
 
   return (
     <>
-      <img src="src/assets/img/logo.png"></img>
+      <nav className="maNavBar">
+        <Header />
+      </nav>
 
       <h1>Bienvenue sur Marmitouille</h1>
 
