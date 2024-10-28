@@ -1,18 +1,17 @@
 import { useState } from "react";
 import "./assets/Style/App.css";
-import Header from "./assets/Components/Header";
-import Card from "./assets/Components/Card";
-import Footer from "./assets/Components/Footer";
+import "./Components/Header";
+import "./Components/Card";
+import "./Components/Footer";
 
 function App() {
   const [] = useState(0);
 
   return (
     <>
-      <Header />
+      <img src="src/assets/img/logo.png"></img>
+
       <h1>Bienvenue sur Marmitouille</h1>
-      <Card />
-      <Footer />
     </>
   );
 }
