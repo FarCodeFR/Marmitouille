@@ -3,6 +3,7 @@ import "./assets/Style/App.css";
 import "./Components/Card";
 import "./Components/Footer";
 import Header from "./Components/Header";
+import Card from "./Components/Card";
 
 const recipes = [
   {
@@ -43,7 +44,7 @@ const recipes = [
   },
   {
     id: 7,
-    name: "Potées au chou vert",
+    name: "Potée au chou vert",
     imgSrc: "src/assets/img/Potee_chou vert-min.jpg",
     alternate: "Picture of potée au chou vert",
   },
@@ -64,10 +65,6 @@ const recipes = [
 function App() {
   const [recipeIndex, setRecipeIndex] = useState(0);
 
-  const maRecette = () => {
-    setRecipeIndex(recipeIndex + 1);
-  };
-
   return (
     <>
       <nav className="maNavBar">
@@ -76,7 +73,16 @@ function App() {
 
       <h1 className="titre">Trouver les meilleurs recettes</h1>
 
-      <body></body>
+      {recipes.map((el) => {
+        return (
+          <Card
+            key={el.id}
+            name={el.name}
+            imgSrc={el.imgSrc}
+            alternate={el.alternate}
+          />
+        );
+      })}
     </>
   );
 }
