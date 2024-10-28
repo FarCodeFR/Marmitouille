@@ -3,27 +3,20 @@
 // }
 
 interface recipeProps {
-  
-    name: string;
-    imgSrc : string;
-    alternate : string;
-  
+  name: string;
+  imgSrc: string;
+  alternate: string;
 }
 
-
-
-
-function Card({name, imgSrc, alternate} : recipeProps ) {
-  
-      return (
-        <article>
-          <figure>
-            <img src={imgSrc} alt={alternate} />
-            <figcaption>{name}</figcaption>
-          </figure>
-        </article>
-      )
-    
+function Card({ name, imgSrc, alternate }: recipeProps) {
+  return (
+    <article>
+      <figure>
+        <img src={imgSrc} alt={alternate} />
+        <figcaption>{name}</figcaption>
+      </figure>
+    </article>
+  );
 }
 
 export default Card;
