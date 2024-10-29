@@ -12,7 +12,7 @@ const recipes = [
     imgSrc: "src/assets/img/bacalhau_a_bras-min.jpg",
     alternate: "Picture of bacalhau à bras",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Une des recettes emblématique de la cuisine portugaise... après les ptits flans",
     likes: 0,
     isFavoris: false,
   },
@@ -22,7 +22,7 @@ const recipes = [
     imgSrc: "src/assets/img/Blanquette_veau-min.jpg",
     alternate: "Picture of blanquette de veau",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Pour ceux qui aiment la cuisine du terroir, le veau, la crème.",
     likes: 0,
     isFavoris: false,
   },
@@ -32,7 +32,7 @@ const recipes = [
     imgSrc: "src/assets/img/boeuf_bourguignon-min.jpg",
     alternate: "Picture of boeuf bourguignon",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Du boeuf, des carottes et du vin...",
     likes: 0,
     isFavoris: false,
   },
@@ -42,7 +42,7 @@ const recipes = [
     imgSrc: "src/assets/img/coquillettes_jambon-min.jpg",
     alternate: "Picture of coquillettes au jambon",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Le plat préféré des 4-10ans",
     likes: 0,
     isFavoris: false,
   },
@@ -52,7 +52,7 @@ const recipes = [
     imgSrc: "src/assets/img/lasagnes-min.jpg",
     alternate: "Picture of lasagnes",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Ma qué ça sent bon la mama dé la familia!",
     likes: 0,
     isFavoris: false,
   },
@@ -62,7 +62,7 @@ const recipes = [
     imgSrc: "src/assets/img/Omelette_oignons-min.jpg",
     alternate: "Picture of omelette aux oignons",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Une recette pour célibataire uniquement.",
     likes: 0,
     isFavoris: false,
   },
@@ -72,7 +72,7 @@ const recipes = [
     imgSrc: "src/assets/img/Potee_chou vert-min.jpg",
     alternate: "Picture of potée au chou vert",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Vous avez vu la soupe aux choux?",
     likes: 0,
     favoris: false,
   },
@@ -82,7 +82,7 @@ const recipes = [
     imgSrc: "src/assets/img/choucroute-min.jpg",
     alternate: "Picture of choucroute",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "La meilleure recette...à consommer seulement avec un riesling et en parlant Allemand",
     likes: 0,
     favoris: false,
   },
@@ -92,11 +92,12 @@ const recipes = [
     imgSrc: "src/assets/img/ramen-min.jpg",
     alternate: "Picture of ramen",
     description:
-      "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
+      "Parfait pour l'hiver en regardant votre anime préféré",
     likes: 0,
     favoris: false,
   },
 ];
+import Recette from "./Components/recette";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -124,9 +125,9 @@ function App() {
       <nav className="maNavBar">
         <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </nav>
-
-      <h1 className="titre">Trouver les meilleurs recettes</h1>
-      <body>
+      <Recette />
+      <h2 className="titre">Trouver les meilleurs recettes</h2>
+      <main>
         {filteredRecipes.map((el) => {
           return (
             <Card
@@ -142,7 +143,7 @@ function App() {
             />
           );
         })}
-      </body>
+      </main>
     </>
   );
 }
