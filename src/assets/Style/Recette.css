@@ -1,5 +1,8 @@
 p {
   width: 100%;
+
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
 section {

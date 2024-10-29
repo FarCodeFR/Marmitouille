@@ -3,6 +3,7 @@
 // }
 
 import "../assets/Style/Card.css";
+import Recette from "./recette";
 
 interface recipeProps {
   id: number;
@@ -23,17 +24,40 @@ function Card({
   onLike,
 }: recipeProps) {
   return (
-    <article>
-      <img src={imgSrc} alt={alternate} />
-      <figcaption>{name}</figcaption>
-      <p>{description}</p>
-      <div className="likeSection">
-        <span>{likes}</span>
-        <button onClick={onLike} className={likes > 0 ? "liked" : "unliked"}>
-          ❤️
-        </button>
-      </div>
-    </article>
+    <>
+      <article>
+        <img src={imgSrc} alt={alternate} />
+        <figcaption>{name}</figcaption>
+        <p>{description}</p>
+        <div className="likeSection">
+          <span>{likes}</span>
+          <button onClick={onLike} className={likes > 0 ? "liked" : "unliked"}>
+            ❤️
+          </button>
+        </div>
+      </article>
+      <section>
+        <div className="animation-container">
+          <div className="lightning-container">
+            <div className="lightning white"></div>
+            <div className="lightning red"></div>
+          </div>
+          <div className="boom-container">
+            <div className="shape circle big white"></div>
+            <div className="shape circle white"></div>
+            <div className="shape triangle big yellow"></div>
+            <div className="shape disc white"></div>
+            <div className="shape triangle blue"></div>
+          </div>
+          <div className="boom-container second">
+            <div className="shape circle big white"></div>
+            <div className="shape circle white"></div>
+            <div className="shape disc white"></div>
+            <div className="shape triangle blue"></div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
 

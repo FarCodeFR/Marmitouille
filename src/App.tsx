@@ -4,6 +4,7 @@ import "./Components/Card";
 import "./Components/Footer";
 import Header from "./Components/Header";
 import Card from "./Components/Card";
+import "./assets/Style/Card.css";
 
 const recipes = [
   {
@@ -120,6 +121,27 @@ function App() {
       <Recette />
       <h1 className="titre">Trouver les meilleurs recettes</h1>
       <body>
+        <section>
+          <div className="animation-container">
+            <div className="lightning-container">
+              <div className="lightning white"></div>
+              <div className="lightning red"></div>
+            </div>
+            <div className="boom-container">
+              <div className="shape circle big white"></div>
+              <div className="shape circle white"></div>
+              <div className="shape triangle big yellow"></div>
+              <div className="shape disc white"></div>
+              <div className="shape triangle blue"></div>
+            </div>
+            <div className="boom-container second">
+              <div className="shape circle big white"></div>
+              <div className="shape circle white"></div>
+              <div className="shape disc white"></div>
+              <div className="shape triangle blue"></div>
+            </div>
+          </div>
+        </section>
         {filteredRecipes.map((el) => {
           return (
             <Card
