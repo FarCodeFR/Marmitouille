@@ -1,0 +1,62 @@
+.maNavBar {
+  background-color: #ffbd33;
+  box-shadow: rgb(0, 0, 0) 1px 2px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 7rem;
+  width: 100vw;
+}
+
+.Marmitouille {
+  display: flex;
+  align-items: center;
+}
+
+.Marmitouille img {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 20px;
+}
+
+.Marmitouille h1 {
+  margin-left: 5px;
+}
+
+.recherche {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recherche input {
+  height: 1.6rem;
+  width: 30rem;
+  border: 1px solid black;
+  border: none;
+  box-shadow: rgb(68, 67, 67) 1px 2px 3px;
+}
+
+.recherche button {
+  height: 1.75rem;
+  width: 1.75rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: rgb(68, 67, 67) 1px 2px 3px;
+}
+.recherche button img {
+  height: 1.2rem;
+  width: 1.1rem;
+  padding-top: 0.2rem;
+}
+
+.Favoris {
+  font-weight: 600;
+  height: 1.6rem;
+  width: 8rem;
+  margin: 0 1rem 0 1rem;
+  box-shadow: rgb(68, 67, 67) 1px 2px 5px;
+  border: none;
+  cursor: pointer;
+}

@@ -1,5 +1,40 @@
-function Card() {
-  return;
+// interface cardsProps {
+//   recipes: recipe[];
+// }
+
+import "../assets/Style/Card.css";
+
+interface recipeProps {
+  id: number;
+  name: string;
+  imgSrc: string;
+  alternate: string;
+  description: string;
+  likes: number;
+  onLike: () => void;
+}
+
+function Card({
+  name,
+  imgSrc,
+  alternate,
+  description,
+  likes,
+  onLike,
+}: recipeProps) {
+  return (
+    <article>
+      <img src={imgSrc} alt={alternate} />
+      <figcaption>{name}</figcaption>
+      <p>{description}</p>
+      <div className="likeSection">
+        <span>{likes}</span>
+        <button onClick={onLike} className={likes > 0 ? "liked" : "unliked"}>
+          ❤️
+        </button>
+      </div>
+    </article>
+  );
 }
 
 export default Card;
