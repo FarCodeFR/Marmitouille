@@ -36,6 +36,9 @@ article p {
   display: flex;
   align-items: center;
   gap: 8px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
 }
 
 button.unliked {
