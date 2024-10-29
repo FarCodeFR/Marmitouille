@@ -11,10 +11,3 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
-.titre {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
-  font-style: oblique;
-}
