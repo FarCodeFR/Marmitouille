@@ -88,6 +88,7 @@ const recipes = [
     likes: 0,
   },
 ];
+import Recette from "./Components/recette";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -116,7 +117,7 @@ function App() {
       <nav className="maNavBar">
         <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </nav>
-
+      <Recette />
       <h2 className="titre">Trouver les meilleurs recettes</h2>
       <main>
         {filteredRecipes.map((el) => {
