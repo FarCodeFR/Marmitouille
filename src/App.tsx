@@ -31,8 +31,7 @@ const recipes = [
     name: "Boeuf bourguignon",
     imgSrc: "src/assets/img/boeuf_bourguignon-min.jpg",
     alternate: "Picture of boeuf bourguignon",
-    description:
-      "Du boeuf, des carottes et du vin...",
+    description: "Du boeuf, des carottes et du vin...",
     likes: 0,
     isFavoris: false,
   },
@@ -41,8 +40,7 @@ const recipes = [
     name: "Coquillettes au jambon",
     imgSrc: "src/assets/img/coquillettes_jambon-min.jpg",
     alternate: "Picture of coquillettes au jambon",
-    description:
-      "Le plat préféré des 4-10ans",
+    description: "Le plat préféré des 4-10ans",
     likes: 0,
     isFavoris: false,
   },
@@ -51,8 +49,7 @@ const recipes = [
     name: "Lasagnes",
     imgSrc: "src/assets/img/lasagnes-min.jpg",
     alternate: "Picture of lasagnes",
-    description:
-      "Ma qué ça sent bon la mama dé la familia!",
+    description: "Ma qué ça sent bon la mama dé la familia!",
     likes: 0,
     isFavoris: false,
   },
@@ -61,8 +58,7 @@ const recipes = [
     name: "Omelettes aux oignons",
     imgSrc: "src/assets/img/Omelette_oignons-min.jpg",
     alternate: "Picture of omelette aux oignons",
-    description:
-      "Une recette pour célibataire uniquement.",
+    description: "Une recette pour célibataire uniquement.",
     likes: 0,
     isFavoris: false,
   },
@@ -71,8 +67,7 @@ const recipes = [
     name: "Potée au chou vert",
     imgSrc: "src/assets/img/Potee_chou vert-min.jpg",
     alternate: "Picture of potée au chou vert",
-    description:
-      "Vous avez vu la soupe aux choux?",
+    description: "Vous avez vu la soupe aux choux?",
     likes: 0,
     favoris: false,
   },
@@ -91,13 +86,12 @@ const recipes = [
     name: "Ramen",
     imgSrc: "src/assets/img/ramen-min.jpg",
     alternate: "Picture of ramen",
-    description:
-      "Parfait pour l'hiver en regardant votre anime préféré",
+    description: "Parfait pour l'hiver en regardant votre anime préféré",
     likes: 0,
     favoris: false,
   },
 ];
-import Recette from "./Components/recette";
+// import Recette from "./Components/Recette";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -125,7 +119,6 @@ function App() {
       <nav className="maNavBar">
         <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </nav>
-      <Recette />
       <h2 className="titre">Trouver les meilleurs recettes</h2>
       <main>
         {filteredRecipes.map((el) => {
