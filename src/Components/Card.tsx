@@ -6,7 +6,6 @@ import { useState } from "react";
 import "../assets/Style/Card.css";
 
 interface recipeProps {
-  id: number;
   name: string;
   imgSrc: string;
   alternate: string;
