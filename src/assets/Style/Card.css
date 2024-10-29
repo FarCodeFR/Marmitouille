@@ -21,6 +21,7 @@ article figcaption {
   font-weight: 800;
   text-decoration: underline;
   text-align: center;
+  font-family: "satisfy";
 }
 
 article p {
@@ -40,7 +41,8 @@ article p {
 button.unliked {
   background: none;
   border: none;
-  color: rgba(255, 0, 0, 0.5); /* Rouge semi-transparent */
+  color: rgba(255, 0, 0, 0.5);
+  /* Rouge semi-transparent */
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -48,13 +50,25 @@ button.unliked {
 button.liked {
   background: none;
   border: none;
-  color: rgba(255, 0, 0, 1); /* Rouge opaque */
+  color: rgba(255, 0, 0, 1);
+  /* Rouge opaque */
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 button:hover {
   opacity: 0.8;
+}
+
+/* button favoris */
+
+.favoris {
+  border: none;
+  height: 40px;
+  width: 30px;
+  font-size: x-large;
+  background: none;
+  cursor: pointer;
 }
 
 article:hover {
