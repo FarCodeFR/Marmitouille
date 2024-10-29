@@ -2,19 +2,37 @@
 //   recipes: recipe[];
 // }
 
+import "../assets/Style/Card.css";
+
 interface recipeProps {
+  id: number;
   name: string;
   imgSrc: string;
   alternate: string;
+  description: string;
+  likes: number;
+  onLike: () => void;
 }
 
-function Card({ name, imgSrc, alternate }: recipeProps) {
+function Card({
+  name,
+  imgSrc,
+  alternate,
+  description,
+  likes,
+  onLike,
+}: recipeProps) {
   return (
     <article>
-      <figure>
-        <img src={imgSrc} alt={alternate} />
-        <figcaption>{name}</figcaption>
-      </figure>
+      <img src={imgSrc} alt={alternate} />
+      <figcaption>{name}</figcaption>
+      <p>{description}</p>
+      <div className="likeSection">
+        <span>{likes}</span>
+        <button onClick={onLike} className={likes > 0 ? "liked" : "unliked"}>
+          ❤️
+        </button>
+      </div>
     </article>
   );
 }
