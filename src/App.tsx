@@ -91,7 +91,7 @@ const recipes = [
     favoris: false,
   },
 ];
-// import Recette from "./Components/Recette";
+// import Recette from "./Components/recette";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
