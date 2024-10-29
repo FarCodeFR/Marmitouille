@@ -1,6 +1,12 @@
 import "../assets/Style/Header.css";
+import SearchBar from "./HeaderComponents/SearchBar";
 
-function Header() {
+interface HeaderProps {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}
+
+function Header({ searchQuery, setSearchQuery }: HeaderProps) {
   return (
     <>
       <section className="Marmitouille">
@@ -12,13 +18,7 @@ function Header() {
       </section>
 
       <section className="recherche">
-        <input type="text" placeholder="  Rechercher une recette" />
-        <button>
-          <img
-            src="src/assets/img/logo_recherche-removebg-preview.png"
-            alt=""
-          />
-        </button>
+        <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </section>
 
       <button className="Favoris">Mes Favoris</button>
