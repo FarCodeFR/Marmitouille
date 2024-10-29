@@ -12,6 +12,7 @@ article {
 article img {
   width: 100%;
   height: 50%;
+  cursor: pointer;
 }
 
 article figcaption {
@@ -54,4 +55,8 @@ button.liked {
 
 button:hover {
   opacity: 0.8;
+}
+
+article:hover {
+  background-color: rgba(245, 245, 220, 0.781);
 }
