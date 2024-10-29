@@ -5,8 +5,8 @@ function Recette() {
   return (
     <>
       <section>
-        <h2>"Riz"</h2>
-        <p>"poulet, riz"</p>
+        <h2>Riz</h2>
+        <p>poulet, riz</p>
       </section>
     </>
   );
