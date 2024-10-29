@@ -28,7 +28,6 @@ function Card({
   onLike,
   recettedDescription,
 }: recipeProps) {
-  // changement d'état pour l'étoile
   const [isFavoris, setIsFavoris] = useState(favoris);
 
   const handleClickFavoris = () => {

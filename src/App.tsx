@@ -137,7 +137,7 @@ function App() {
       <nav className="maNavBar">
         <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </nav>
-      <h2 className="titre">Trouver les meilleurs recettes</h2>
+      <h2 className="titre">Trouver les meilleures recettes</h2>
       <main>
         {filteredRecipes.map((el) => {
           return (
