@@ -14,6 +14,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    isFavoris: false,
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    isFavoris: false,
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    isFavoris: false,
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    isFavoris: false,
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    isFavoris: false,
   },
   {
     id: 6,
@@ -59,6 +64,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    isFavoris: false,
   },
   {
     id: 7,
@@ -68,6 +74,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    favoris: false,
   },
   {
     id: 8,
@@ -77,6 +84,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    favoris: false,
   },
   {
     id: 9,
@@ -86,6 +94,7 @@ const recipes = [
     description:
       "Je suis la description actuelle donc changer moi merde je connais pas cette recette",
     likes: 0,
+    favoris: false,
   },
 ];
 
@@ -110,7 +119,6 @@ function App() {
       )
     );
   };
-
   return (
     <>
       <nav className="maNavBar">
@@ -130,6 +138,7 @@ function App() {
               description={el.description}
               likes={el.likes}
               onLike={() => toggleLike(el.id)}
+              favoris={el.favoris}
             />
           );
         })}

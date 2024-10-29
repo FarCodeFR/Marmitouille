@@ -55,3 +55,14 @@ button.liked {
 button:hover {
   opacity: 0.8;
 }
+
+/* button favoris */
+
+.favoris {
+  border: none;
+  height: 40px;
+  width: 30px;
+  font-size: x-large;
+  background: none;
+  cursor: pointer;
+}

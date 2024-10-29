@@ -2,6 +2,7 @@
 //   recipes: recipe[];
 // }
 
+import { useState } from "react";
 import "../assets/Style/Card.css";
 
 interface recipeProps {
@@ -11,6 +12,7 @@ interface recipeProps {
   alternate: string;
   description: string;
   likes: number;
+  favoris: boolean;
   onLike: () => void;
 }
 
@@ -20,8 +22,16 @@ function Card({
   alternate,
   description,
   likes,
+  favoris,
   onLike,
 }: recipeProps) {
+  // changement d'état pour l'étoile
+  const [isFavoris, setIsFavoris] = useState(favoris);
+
+  const handleClickFavoris = () => {
+    setIsFavoris((preve) => !preve);
+  };
+
   return (
     <article>
       <img src={imgSrc} alt={alternate} />
@@ -31,6 +41,9 @@ function Card({
         <span>{likes}</span>
         <button onClick={onLike} className={likes > 0 ? "liked" : "unliked"}>
           ❤️
+        </button>
+        <button onClick={handleClickFavoris} className="favoris">
+          {isFavoris ? "🌟" : "☆"}
         </button>
       </div>
     </article>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../assets/Style/Header.css";
 import SearchBar from "./HeaderComponents/SearchBar";
 
@@ -7,6 +8,12 @@ interface HeaderProps {
 }
 
 function Header({ searchQuery, setSearchQuery }: HeaderProps) {
+  // changement boutton travaux
+  const [change, setChange] = useState("");
+
+  const handleClickChange = () => {
+    setChange((preve) => !preve);
+  };
   return (
     <>
       <section className="Marmitouille">
@@ -21,7 +28,9 @@ function Header({ searchQuery, setSearchQuery }: HeaderProps) {
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       </section>
 
-      <button className="Favoris">Mes Favoris</button>
+      <button onClick={handleClickChange} className="mesFavoris">
+        {change ? "🚧" : "Mes Favoris"}
+      </button>
     </>
   );
 }
