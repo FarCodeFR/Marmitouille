@@ -32,7 +32,7 @@
 .recherche input {
   height: 1.6rem;
   width: 30rem;
-  border: 1px solid black;
+  border-radius: 5px;
   border: none;
   box-shadow: rgb(68, 67, 67) 1px 2px 3px;
 }
@@ -45,6 +45,7 @@
   cursor: pointer;
   box-shadow: rgb(68, 67, 67) 1px 2px 3px;
 }
+
 .recherche button img {
   height: 1.2rem;
   width: 1.1rem;
@@ -59,4 +60,5 @@
   box-shadow: rgb(68, 67, 67) 1px 2px 5px;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
 }
